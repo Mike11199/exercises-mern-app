@@ -129,12 +129,12 @@ content-type: application/json
 ### Request 12: UPDATE the fifth exercise with reps at 12 and unit at kgs (weight remains 20)
 ### CHANGE the value of ID in the following URL 
 ###        to the ID assigned to Deadlift with date 01-22-22.
-PUT http://localhost:3000/exercises/62ec17b8c27f3d06547b7a2b HTTP/1.1
+PUT http://localhost:3000/exercises/635c1ca668c41ab2e9775469 HTTP/1.1
 content-type: application/json
 
 {
     "name": "Deadlift",
-    "reps": 12,
+    "reps": 122,
     "weight": 20,
     "unit": "kgs",
     "date": "01-22-22"
@@ -148,7 +148,7 @@ GET  http://localhost:3000/exercises/62ec0d357984e67ef4eecd77 HTTP/1.1
 ### CHANGE the value of ID in the following URL to the ID assigned
 ###     to Deadlift with date 01-22-22. You can find that ID from the
 ##      previous retrieve request.
-DELETE http://localhost:3000/exercises/62ec17b8c27f3d06547b7a2b HTTP/1.1
+DELETE http://localhost:3000/exercises/635c1fc0d1577fb6fc92e3a9 HTTP/1.1
 
 
 ### Request 15: VERIFY that the Deadlift on 01-22-22 

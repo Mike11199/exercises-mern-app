@@ -28,6 +28,9 @@ const exerciseSchema = mongoose.Schema({
     date: { type: Date, required: true }
 })
 
+// Compile the model from the schema
+const Exercise = mongoose.model("Exercise", exerciseSchema)
+
 // CREATE model *****************************************
 const createExercise = async (name, reps, weight, unit, date) => {
     const exercise = new Exercise({ 
@@ -40,11 +43,39 @@ const createExercise = async (name, reps, weight, unit, date) => {
     return exercise.save()
 }
 
+// RETRIEVE model *****************************************
+const findExercises = async () => {
+    const query = Exercise.find()
+    return query.exec()
+}
+
+const findExerciseById = async (_id) => {
+    const query = Exercise.findById(_id)
+    return query.exec()
+}
+
+// REPLACE model *****************************************************
+const replaceExerciseByID = async (_id, name, reps, weight, unit, date) => {
+    const result = await Exercise.replaceOne({_id: _id }, {
+        name: name, 
+        reps: reps, 
+        weight: weight, 
+        unit: unit, 
+        date: date, 
+    })
+    return result.modifiedCount
+}
+
+
+// DELETE model based on ID  *****************************************
+const deleteExerciseById = async (_id) => {
+    const result = await Exercise.deleteOne({_id: _id})
+    return result.deletedCount
+}
 
 
 
-// Compile the model from the schema
-const Exercise = mongoose.model("Exercise", exerciseSchema)
+
 
 // Export our variables for use in the controller file.
-export { createExercise }
+export { createExercise, findExercises, findExerciseById, replaceExerciseByID, deleteExerciseById  }

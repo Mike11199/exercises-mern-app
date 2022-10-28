@@ -5,8 +5,10 @@ import HomePage from './pages/HomePage'
 import Navigation from './components/Navigation'
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useState } from 'react'
 
 function App() {
+  const [exercise, setExercise] = useState([])
   return (
     <>
     <Router>
@@ -19,13 +21,15 @@ function App() {
       </div>
       <main>  
         <Route path="/" exact>
-          <HomePage />
+          {/* lift state to common ancestor */}
+          <HomePage setExercise={setExercise}/>  
         </Route>
         <Route path="/create">
           <CreatePage />
         </Route>
         <Route path="/edit">
-          <EditPage />
+          {/* lift state to common ancestor */}
+          <EditPage exercise={exercise}/>
         </Route>
       </main>
       <footer>

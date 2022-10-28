@@ -101,11 +101,11 @@ div {}
 aside {}
 
 footer {
+  margin-top: 100px;
   align-self: flex-end;
   display: flex;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
+  position: absolute;  
   width: 100%;
   color: white;
   background-color: black;
@@ -160,7 +160,7 @@ table {
   border: 2px solid black;  
   padding: 0px;
   box-shadow: 10px 5px 15px black;
-
+  margin-bottom: 10px;
 }
 tr:nth-child(odd){
   background-color: rgb(176, 170, 184);  
@@ -207,7 +207,7 @@ td {
   color: black;
   
 }
-  td:nth-child(1) {}
+
 colgroup {}
 data {}
 datalist {}
@@ -215,27 +215,44 @@ datalist {}
 
 /*  ----- Form ----- */
 form {
-  margin-top: 40px;
-  background-color: whitesmoke;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 0px;
+  }
+
+
+button {
+  margin-top: 20px;
+  background-color: darkgreen;
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 10px 5px 15px black;
+  color: white;
 }
-fieldset {}
-  legend {}
-label {}
-  button {
-    margin-left: 20px;
-  }
-  input {
-    margin-left: 20px;
-  }
-  output {}
-  meter {}
-  progress {}
-  select {}
-    optgroup {}
-    option {}
-  textarea {}
+
+button:active {
+  background-color: rgb(10, 182, 10);
+}
+button:hover {
+  background-color: rgb(7, 143, 7);
+  box-shadow: 10px 5px 15px darkgreen;
+}
+
+input {
+  background-color: rgb(196, 187, 187);
+  padding: 0px;
+  border: 2px solid black;
+  
+}
+input:focus {
+  background-color: rgb(196, 187, 187);
+  border: 0px;
+  padding: 0px;
+  outline:none;
+  border: 2px solid rgb(5, 5, 124);
+  box-shadow: 1px 1px 4px blue;
+}
+
+
 
 /* ----- Media ----- */
 figure {}

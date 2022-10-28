@@ -1,18 +1,18 @@
 import React from 'react'
 import Row from './Row'
 
-const Table = ({exercise}) => {
+const Table = ({exercise, onDelete, onEdit }) => {
   return (
     <table>
         <thead>
         <tr>
-            <th class="table_header" scope="col">Name</th>
-            <th class="table_header" scope="col">Reps</th>
-            <th class="table_header" scope="col">Weight</th>
-            <th class="table_header" scope="col">Units</th>
-            <th class="table_header" scope="col">Date</th>
-            <th class="table_header" scope="col">Edit</th>
-            <th class="table_header" scope="col">Delete</th>
+            <th className="table_header" scope="col">Name</th>
+            <th className="table_header" scope="col">Reps</th>
+            <th className="table_header" scope="col">Weight</th>
+            <th className="table_header" scope="col">Units</th>
+            <th className="table_header" scope="col">Date</th>
+            <th className="table_header" scope="col">Edit</th>
+            <th className="table_header" scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -20,6 +20,8 @@ const Table = ({exercise}) => {
                     <Row 
                         exercise={exercise} 
                         key={i}
+                        onDelete={onDelete}
+                        onEdit={onEdit} 
                     />)}  
         </tbody>
     </table>
