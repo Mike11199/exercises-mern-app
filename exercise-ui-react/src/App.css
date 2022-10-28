@@ -77,7 +77,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(46, 35, 110);
+  background-color: rgb(33, 25, 80);
   color: white;
   border: 0px;
   
@@ -157,27 +157,44 @@ ins {}
 table {
   margin-top: 35px;
   border-collapse: collapse;
-  border: 2px solid black;
-  width: 40%;
+  border: 2px solid black;  
   padding: 0px;
   box-shadow: 10px 5px 15px black;
+
 }
-tr:nth-child(even){
-  background-color: rgb(196, 196, 199);
+tr:nth-child(odd){
+  background-color: rgb(176, 170, 184);  
 }
 
+tr:nth-child(even){
+  background-color: rgb(160, 79, 79);
+}
+
+.table_header {
+  background-color: #0e3d52;
+  color: whitesmoke;
+  border: 2px solid black;
+}
+
+.delete_table_cell{
+  text-align: center; 
+}
+
+.edit_table_cell{
+  text-align: center;
+}
+
+tr {}
 
 
 caption {}
 thead {
-  background-color: #0e3d52;
-  color: whitesmoke;
-  border: 2px solid black;
+
   }
 tbody {}
 tfoot {}
-tr {}
-  tr:nth-child(even) {}
+
+
 th {
   padding: 10px 10px;
   border: 2px solid black;
@@ -186,7 +203,9 @@ td {
   padding: 5px 5px;
   border: 2px solid black;
   height: 30px;
-  color: rgb(255, 255, 255);
+  width: 150px;
+  color: black;
+  
 }
   td:nth-child(1) {}
 colgroup {}

@@ -6,17 +6,21 @@ const Table = ({exercise}) => {
     <table>
         <thead>
         <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Reps</th>
-            <th scope="col">Weight</th>
-            <th scope="col">Units</th>
-            <th scope="col">Date</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
+            <th class="table_header" scope="col">Name</th>
+            <th class="table_header" scope="col">Reps</th>
+            <th class="table_header" scope="col">Weight</th>
+            <th class="table_header" scope="col">Units</th>
+            <th class="table_header" scope="col">Date</th>
+            <th class="table_header" scope="col">Edit</th>
+            <th class="table_header" scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
-          <Row exercise={exercise} />             
+          {exercise.map((exercise, i) => 
+                    <Row 
+                        exercise={exercise} 
+                        key={i}
+                    />)}  
         </tbody>
     </table>
   )

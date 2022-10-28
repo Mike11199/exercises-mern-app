@@ -10,13 +10,50 @@ const HomePage = () => {
   const [exercises, setExercises] = useState([])
   
   
-  const sampleExercise = {
+  const sampleExercise = 
+  [
+  {
     "name": "Squat",
     "reps": 10,
     "weight": 30,
     "unit": "lbs",
     "date": "01-18-22"
-}
+},
+{
+  "name": "Bench Press",
+  "reps": 10,
+  "weight": 30,
+  "unit": "lbs",
+  "date": "01-18-22"
+},
+{
+  "name": "Deadlift",
+  "reps": 10,
+  "weight": 30,
+  "unit": "lbs",
+  "date": "01-18-22"
+},
+{
+  "name": "Pull Up",
+  "reps": 10,
+  "weight": 30,
+  "unit": "lbs",
+  "date": "01-18-22"
+},
+{
+  "name": "Pull Up",
+  "reps": 10,
+  "weight": 30,
+  "unit": "lbs",
+  "date": "01-18-22"
+},
+{
+  "name": "Pull Up",
+  "reps": 10,
+  "weight": 30,
+  "unit": "lbs",
+  "date": "01-18-22"
+},]
 
   return (
     <>
