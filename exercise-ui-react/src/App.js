@@ -12,7 +12,7 @@ function App() {
     <Router>
       <header className="App-header">
         <h1>Exercise Tracker</h1>
-        <p style={{margin: "10px 0px 30px 0px"}}>Track all your exercises here!  This is a MERN application with full CRUD functionality.</p>       
+        <p style={{margin: "10px 0px 30px 0px"}}>Track all your exercises here!  &nbsp; This is a MERN application with full CRUD functionality.</p>       
       </header>
       <div className="nav_component">
         <Navigation/>

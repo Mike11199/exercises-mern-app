@@ -160,6 +160,7 @@ table {
   border: 2px solid black;
   width: 40%;
   padding: 0px;
+  box-shadow: 10px 5px 15px black;
 }
 tr:nth-child(even){
   background-color: rgb(196, 196, 199);
@@ -184,6 +185,8 @@ th {
 td {
   padding: 5px 5px;
   border: 2px solid black;
+  height: 30px;
+  color: rgb(255, 255, 255);
 }
   td:nth-child(1) {}
 colgroup {}
