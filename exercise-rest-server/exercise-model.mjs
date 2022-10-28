@@ -19,12 +19,32 @@ db.once("open", (err) => {
     }
 })
 
-// SCHEMA: Define the collection's schema.
-// const movieSchema = mongoose.Schema({
-// 	title: { type: String, required: true },
-// 	year: { type: Number, required: true },
-// 	language: { type: String, required: true }
-// });
+// SCHEMA: Define the collection's schema - ALL properties are required
+const exerciseSchema = mongoose.Schema({
+	name: { type: String, required: true },
+	reps: { type: Number, required: true },
+	weight: { type: Number, required: true },
+    unit: { type: String, required: true },
+    date: { type: Date, required: true }
+})
 
-// Compile the model from the schema.
-// const Movie = mongoose.model("Movie", movieSchema);
+// CREATE model *****************************************
+const createExercise = async (name, reps, weight, unit, date) => {
+    const exercise = new Exercise({ 
+        name: name, 
+        reps: reps, 
+        weight: weight, 
+        unit: unit, 
+        date: date, 
+    })
+    return exercise.save()
+}
+
+
+
+
+// Compile the model from the schema
+const Exercise = mongoose.model("Exercise", exerciseSchema)
+
+// Export our variables for use in the controller file.
+export { createExercise }
