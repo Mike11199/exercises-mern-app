@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+          /* Add fonts from the app's server 
+@font-face {                
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+} 
+          */                           
+
+          /* ...or hosted services like Google Fonts 
+@import url(//fonts.googleapis.com/css?family=Font+Name);
+          */
+
+          @import '../node_modules/modern-normalize/modern-normalize.css';
+          /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+          /* Component-specific stylesheets, if any 
+@import "component1.css";   
+          */
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  color:white;
+  background-color: rgb(97, 97, 97);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+.nav_component {
+  background-color: black;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+}
+nav {
+  /* see .menu_link used instead */
+}
+nav a {
+  /* see .menu_link used instead */
+}
+.Menu_Link{
+  color: whitesmoke;
+  text-decoration: none;  /*Get rid of underline*/
+  margin-left: 30px;
+  margin-right: 30px;
+  font-weight: 500;
+  
+}
+.Menu_Link:hover{
+  color: rgb(17, 17, 231);  
+}
+.Menu_Link:active{
+  color: rgb(39, 9, 158);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*  ----- Page layout blocks -----  */
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(46, 35, 110);
   color: white;
+  border: 0px;
+  
+}
+main {
+  color: black;  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 0px;
+  padding: 0px;
+  margin-left: 30px;
+}
+section {}
+  article {
+    margin: 15px;
+  }
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+
+footer {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-color: black;
+
 }
 
-.App-link {
-  color: #61dafb;
+/*  -----  Typography  ----- */
+
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {} /* Define consistant font family.*/
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {
+  margin-top: 35px;
+  border-collapse: collapse;
+  border: 2px solid black;
+  width: 40%;
+  padding: 0px;
+}
+tr:nth-child(even){
+  background-color: rgb(196, 196, 199);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+caption {}
+thead {
+  background-color: #0e3d52;
+  color: whitesmoke;
+  border: 2px solid black;
   }
-  to {
-    transform: rotate(360deg);
-  }
+tbody {}
+tfoot {}
+tr {}
+  tr:nth-child(even) {}
+th {
+  padding: 10px 10px;
+  border: 2px solid black;
 }
+td {
+  padding: 5px 5px;
+  border: 2px solid black;
+}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {
+  margin-top: 40px;
+  background-color: whitesmoke;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0px;
+}
+fieldset {}
+  legend {}
+label {}
+  button {
+    margin-left: 20px;
+  }
+  input {
+    margin-left: 20px;
+  }
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
