@@ -4,8 +4,11 @@
 
 <h2>GIFs</h2>
 
+Front end sends requests to the Express server via Fetch API.  REST APIs on the Express server implemented by controllers connect with the Model layer to update the MongoDB collection/database for the exercises.
+
 ![MERN_Exercise_Tracker_2](https://user-images.githubusercontent.com/91037796/198755149-ef6cd095-9a8e-41ee-82b9-bea32f456076.gif)
 
+Delete and Edit functionality via react-icons.  Sends PUT and DELETE requests via REST APIs to the Express server.
 
 ![MERN_Exercise_Tracker](https://user-images.githubusercontent.com/91037796/198755045-1404cd71-40a5-45d1-911f-f548adf04cef.gif)
 
