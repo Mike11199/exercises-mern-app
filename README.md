@@ -15,9 +15,14 @@ Delete and Edit functionality via react-icons.  Sends PUT and DELETE requests vi
 
 <h2>Screenshots</h2>
 
+Home Page
+
 ![image](https://user-images.githubusercontent.com/91037796/198750798-c9fe7ffd-fe7a-4e05-93da-811ff8dbbaea.png)
+
+Edit Page
 
 ![image](https://user-images.githubusercontent.com/91037796/198751123-ac14c1f4-f129-41c6-b152-17040085d083.png)
 
+Add Page
 
 ![image](https://user-images.githubusercontent.com/91037796/198751194-20d70270-1256-49c6-a4f3-ff2cbfbb72c1.png)
