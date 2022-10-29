@@ -2,6 +2,8 @@
 
 Full stack MERN project, exercise tracker developed for CS290 as a portfolio project.  Per the class, this project is allowed to be posted to a public GitHub repo after the quarter ends.  Simple project demonstrating a view layer by react, model layer handled by Mongoose on the server side, and controller layer using Node/Express to handle requests by the front end.
 
+This project must be downloaded and run with "npm start" on one terminal, to run the front-end on localhost:8000, and another terminal with "npm start" to run the server on localhost:3000.  I did not upload this to Heroku due to the simplicty of this project (see other complex projects done in my own time with user-login, authentication, JWT, etc.).
+
 
 <br/>
 
@@ -40,3 +42,9 @@ Add Page
 <br/>
 
 ![image](https://user-images.githubusercontent.com/91037796/198751194-20d70270-1256-49c6-a4f3-ff2cbfbb72c1.png)
+
+
+MongoDB Collection of Exercises
+<br/>
+
+![image](https://user-images.githubusercontent.com/91037796/198755567-95cdea63-2f4f-436f-8a60-10903c5c471e.png)
