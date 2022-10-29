@@ -51,6 +51,7 @@ const HomePage = ({setExercise}) => {
   return (
     <>
     <h1>Exercises Table</h1>
+    <p>View your saved exercise history below.  Click the trash icon to delete an exercise, or pencil icon to edit an exercise.</p>
     <Table 
       exercise={exercises}
       onEdit={onEditExercise} 

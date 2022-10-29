@@ -12,6 +12,7 @@ function App() {
   return (
     <>
     <Router>
+      <div className='content_main'>
       <header className="App-header">
         <h1>Exercise Tracker</h1>
         <p style={{margin: "10px 0px 30px 0px"}}>Track all your exercises here!  &nbsp; This is a MERN application with full CRUD functionality.</p>       
@@ -37,6 +38,7 @@ function App() {
         © 2022 by Michael Iwanek
         </p>
       </footer>
+      </div>
     </Router>
     </>
   )

@@ -41,6 +41,11 @@ a:visited {
   
 }
 
+.edit_add_form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 /*  ----- Navigation ----- Override text links for navigation only.  */
 .nav_component {
@@ -101,15 +106,21 @@ div {}
 aside {}
 
 footer {
-  margin-top: 100px;
+  
   align-self: flex-end;
-  display: flex;
-  justify-content: center;
-  position: absolute;  
+  display: flex;  
+  justify-content: center;  
   width: 100%;
   color: white;
   background-color: black;
+  position: fixed;
+  bottom: 0;
 
+}
+
+.content_main {
+ display: flex;
+ flex-direction: column;
 }
 
 /*  -----  Typography  ----- */
@@ -160,13 +171,17 @@ table {
   border: 2px solid black;  
   padding: 0px;
   box-shadow: 10px 5px 15px black;
-  margin-bottom: 10px;
+  margin-bottom: 300px;
 }
 tr:nth-child(odd){
   background-color: rgb(176, 170, 184);  
 }
 
 tr:nth-child(even){
+  background-color: rgb(160, 79, 79);
+}
+
+.edit_add_row td {
   background-color: rgb(160, 79, 79);
 }
 
@@ -198,6 +213,7 @@ tfoot {}
 th {
   padding: 10px 10px;
   border: 2px solid black;
+  width: 150px;
 }
 td {
   padding: 5px 5px;
@@ -220,13 +236,15 @@ form {
 
 
 button {
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: darkgreen;
   height: 50px;
   width: 200px;
   border-radius: 20px;
   box-shadow: 10px 5px 15px black;
   color: white;
+  margin-bottom: 300px;
+  margin-left: 100px;
 }
 
 button:active {
@@ -252,6 +270,21 @@ input:focus {
   box-shadow: 1px 1px 4px blue;
 }
 
+select {
+  background-color: rgb(196, 187, 187);
+  padding: 0px;
+  border: 2px solid black;
+  width: 150px;
+  
+}
+select:focus {
+  background-color: rgb(196, 187, 187);
+  border: 0px;
+  padding: 0px;
+  outline:none;
+  border: 2px solid rgb(5, 5, 124);
+  box-shadow: 1px 1px 4px blue;
+}
 
 
 /* ----- Media ----- */
