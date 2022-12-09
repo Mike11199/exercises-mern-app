@@ -1,8 +1,8 @@
 <h2>MERN Exercise App Portfolio Project - CS290 Web Development</h2>
 
-Full stack MERN project, exercise tracker developed for CS290 as a portfolio project.  Per the class, this project is allowed to be posted to a public GitHub repo after the quarter ends.  Simple project demonstrating a view layer by react, model layer handled by Mongoose on the server side, and controller layer using Node/Express to handle requests by the front end.
+Full stack MERN project, exercise tracker developed for CS290 as a portfolio project.  Per the class, this project is allowed to be posted to a public GitHub repo after the quarter ends.  Project demonstrates a view layer by react, model layer handled by Mongoose on the server side, and controller layer using Node/Express to handle requests by the front end.
 
-This project must be downloaded and run with "npm start" on one terminal, to run the front-end on localhost:8000, and another terminal with "npm start" to run the server on localhost:3000.  I did not upload this to Heroku due to the simplicty of this project (see other complex projects done in my own time with user-login, authentication, JWT, etc.).
+This project must be downloaded and run with "npm start" on one terminal, to run the front-end on localhost:8000, and another terminal with "npm start" to run the server on localhost:3000. 
 
 
 <br/>
@@ -23,6 +23,92 @@ Delete and Edit functionality via react-icons.  Sends PUT and DELETE requests vi
 <br/>
 
 ![MERN_Exercise_Tracker](https://user-images.githubusercontent.com/91037796/198755045-1404cd71-40a5-45d1-911f-f548adf04cef.gif)
+
+
+
+<br/>
+
+<h2>REST APIs</h2>
+
+
+-GET request for all exercises
+```js
+// RETRIEVE ALL Exercises Controller
+app.get ('/exercises', async (req,res) => {         
+    try {
+        const result = await exercises.findExercises()
+        return res.status(200).send(result)
+    } catch (error) {
+        console.log(error);
+        res.contentType('application/json')
+        return res.status(404).json({ error: 'Failed to retrieve the exercises.' }) //return 404 not found
+    }
+
+})
+```
+
+
+-GET request for a specific exercise
+```js
+// RETRIEVE by ID Exercises Controller
+app.get('/exercises/:_id', async (req, res) => {
+    const exerciseID = req.params._id  //PATH PARAMETER; no req body
+    try {
+        const exercise = await exercises.findExerciseById(exerciseID)    
+        if (exercise !== null) {
+            res.contentType('application/json')
+            return res.status(200).json(exercise)
+        } else {
+            res.contentType('application/json')
+            return res.status(404).json({ Error: 'No exercise matching this ID was found.'})
+        }         
+     } catch (error){
+        console.error(error);
+        return res.send({ error: 'Request to delete a document failed' })
+     }    
+})
+```
+
+PUT request to create a new exericse
+```js
+// CREATE Exercise Controller
+app.post ('/exercises', async (req,res) => {         
+    try {
+        const {name, reps, weight, unit, date} = req.body 
+
+        if ( !moment(date).isValid() ){
+            return res.status(400).json({ error: 'Error!  Invalid Date!' }).send //return 400 bad request
+        }
+
+        if (!name || !reps || !weight || !unit || !date){
+            return res.status(400).json({ error: 'Error!  Please provide all values when creating a new exercise.' }).send //return 400 bad request
+        }   
+        if (reps <= 0 || weight <=0 ){
+            return res.status(400).json({ error: 'Error!  Please ensure reps and weight are numbers above or equal to zero' }).send //return 400 bad request
+        }
+        else{
+            try {
+                const createdExercise = await exercises.createExercise(
+                    name, 
+                    reps, 
+                    weight,
+                    unit,
+                    date,
+                    )   
+                res.contentType('application/json')
+                res.status(201).json(createdExercise).send  //return status code 201 for created and JSON object of exercise
+            } catch (error) {
+                    console.log(error);
+                    return res.status(400).json({ error: 'Failed to create the exercise.' }).send //return 400 bad request
+            }
+        }
+    } catch (error) {
+        return res.status(400).json({ error: 'Error!  Please provide all values when creating a new exercise.'  }).send //return 400 bad request
+    }     
+
+})
+```
+
 
 
 <h2>Screenshots</h2>
