@@ -7,6 +7,17 @@ This project must be downloaded and run with "npm start" on one terminal, to run
 
 <br/>
 
+<h2>Concepts Used</h2>
+
+-REST APIs via Express.js in the controller layer, which communicates with the model layer to update the MongoDB database
+-Manual testing via an HTTP file as opposed to Postman to verify functionality
+-React hooks such as useState, useEffect, and useHistory to navigate and pass props to React components
+-Fetch API used on the front-end as opposed to Axios to send various HTTP requests to the server via promises
+-React router to ensure a single-page application (SPA) is used to minimize server requests, and give the illusion of navigating to new pages
+-React Components for table, rows, navigation that are dynamically rendered and re-rendered as necessary
+
+<br/>
+
 <h2>GIFs</h2>
 
 
